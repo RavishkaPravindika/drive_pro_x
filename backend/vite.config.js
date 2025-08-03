@@ -1,13 +1,25 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/sass/app.scss', 'resources/js/app.js'],
             refresh: true,
         }),
-        tailwindcss(),
+        {
+            name: 'suppress-sass-warnings',
+            enforce: 'pre',
+            transform(code, id) {
+                if (id.endsWith('.scss')) {
+                    // Suppress Sass warnings in the console
+                    return {
+                        code,
+                        map: null,
+                        warnings: [], // Ignore warnings
+                    };
+                }
+            },
+        },
     ],
 });

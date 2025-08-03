@@ -1,0 +1,74 @@
+// // Fonts
+// @import url('https://fonts.bunny.net/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// // Bootstrap
+// @import 'bootstrap/scss/bootstrap';
+
+
+@use 'variables' as *;
+@use 'bootstrap/scss/bootstrap' as *;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.card-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+.card-body {
+    padding: 15px;
+}
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #007bff; /* Adjust based on Figma design */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary:hover {
+    background-color: #0056b3; /* Adjust based on Figma design */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+form div {
+    margin-bottom: 15px;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px;
+}
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
