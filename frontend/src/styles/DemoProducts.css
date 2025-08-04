@@ -1,0 +1,35 @@
+.demo-products-section {
+  @apply p-10;
+}
+
+.demo-products-section h2 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.demo-products-section .product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4;
+}
+
+.demo-products-section .product-card {
+  @apply border rounded-lg p-4 text-center;
+}
+
+.demo-products-section .product-card img {
+  @apply w-full h-32 object-cover mb-2;
+}
+
+.demo-products-section .product-card h3 {
+  @apply text-lg font-semibold;
+}
+
+.demo-products-section .product-card p {
+  @apply text-gray-600;
+}
+
+.demo-products-section .product-card .price {
+  @apply text-green-600 font-bold;
+}
+
+.demo-products-section .product-card button {
+  @apply mt-2 bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-200;
+}

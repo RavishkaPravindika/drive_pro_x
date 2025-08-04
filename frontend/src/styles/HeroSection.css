@@ -1,0 +1,35 @@
+.hero-section {
+  @apply relative bg-gray-300 p-10 text-center;
+}
+
+.hero-section h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+.hero-section p {
+  @apply mb-4;
+}
+
+.hero-section .form-container {
+  @apply bg-white p-6 rounded-lg shadow-md inline-block;
+}
+
+.hero-section .form-container select {
+  @apply p-2 mb-2 w-full border rounded;
+}
+
+.hero-section .form-container button {
+  @apply w-full bg-green-600 text-white p-2 rounded hover:bg-green-700 transition duration-200;
+}
+
+.hero-section .hint {
+  @apply mt-4 text-sm;
+}
+
+.hero-section .background-image {
+  @apply absolute inset-0 flex items-center justify-center opacity-50;
+}
+
+.hero-section .background-image img {
+  @apply w-full h-auto object-cover;
+}
