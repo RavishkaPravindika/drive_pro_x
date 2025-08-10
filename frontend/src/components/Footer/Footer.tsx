@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             src="/images/logo.png"
             alt="DriveProX Logo"
             width={150}
-            height={40}
+            height={50}
             className={styles.logo}
           />
           <p className={styles.tagline}>Powering Every Mile</p>
