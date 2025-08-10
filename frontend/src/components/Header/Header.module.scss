@@ -1,0 +1,214 @@
+@import "../../styles/variables";
+
+.header {
+  width: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #13618C, #297B35);
+  padding: 20px 30px;
+  color: $white;
+  font-size: 14px;
+  position: relative;
+
+//   .leftLinks {
+//     display: flex;
+//     gap: 15px;
+
+//     a {
+//       color: $white;
+//       text-decoration: none;
+//       font-weight: 500;
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+
+//     @media (max-width: 980px) {
+//       display: none;
+//       flex-direction: column;
+//       position: absolute;
+//       top: 40px;
+//       left: 0;
+//       background: linear-gradient(to right, #13618C, #297B35);
+//       width: 100%;
+//       padding: 10px 20px;
+//     }
+
+//     &.showMenu {
+//       display: flex;
+//     }
+//   }
+
+//   .rightInfo {
+//     display: flex;
+//     gap: 10px;
+//     @media (max-width: 980px) {
+//       display: none;
+//     }
+//   }
+
+
+  .leftLinks {
+  display: flex;
+  gap: 15px;
+
+  a {
+    color: #D0D5DD;
+    text-decoration: none;
+    // font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: linear-gradient(to right, #13618C, #297B35);
+    width: 100%;
+    padding: 10px 20px;
+    gap: 12px;
+
+    // This will also style the right info inside mobile menu
+    .rightInfoMobile {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 13px;
+    }
+  }
+
+  &.showMenu {
+    display: flex;
+  }
+}
+
+.rightInfo {
+  display: flex;
+  gap: 10px;
+  color: #D0D5DD;
+  
+  a {
+    color: #D0D5DD;
+    text-decoration: none;
+    // font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    display: none; // hidden unless inside mobile menu
+  }
+}
+
+.rightInfoMobile {
+  display: none;
+}
+
+
+  .mobileMenuIcon {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+    @media (max-width: 1000px) {
+      display: block;
+      position: fixed;
+    }
+  }
+}
+
+.searchSection {
+  display: flex;
+  align-items: center;
+  background: $white;
+  padding: 20px 30px;
+  gap: 15px;
+  border-bottom: 1px solid $grey-border;
+  margin-left: 60px;
+
+  .menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+    // @media (max-width: 600px) {
+    //   display: none;
+    // }
+  }
+
+  .logo {
+    height: 20px;
+  }
+
+  .logoText {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -10px;
+  }
+
+  .centerSearch {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+    justify-content: center;
+
+    .filterIcon {
+      font-size: 30px;
+      cursor: pointer;
+      margin-left: 30px;
+    //   color: $primary-color;
+    }
+
+    .searchBox {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      border: 1px solid $grey-border;
+      border-radius: 4px;
+      overflow: hidden;
+      background: $white;
+      margin-right: 30px;
+
+      input {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+      }
+
+      .searchIcon {
+        // background: $white;
+        // color: $primary-color;
+        font-size: 30px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .rightIcons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .centerSearch {
+      order: 3;
+      width: 100%;
+    }
+  }
+}

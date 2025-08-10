@@ -1,0 +1,158 @@
+/* components/Services.module.scss */
+.servicesSection {
+  background-color: #fff;
+  padding: 2rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.newsletterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.newsletterLeft {
+  flex: 1;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.newsletterSmallGreen {
+  font-size: 0.875rem;
+  color: #28a745;
+  margin-bottom: 0.5rem;
+}
+
+.newsletterTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.newsletterSubtitle {
+  font-size: 0.875rem;
+  color: #000;
+  margin-bottom: 0;
+}
+
+.newsletterRight {
+  flex: 1;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.subscriptionForm {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.emailInput {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.875rem;
+  width: 200px;
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
+}
+
+.subscribeButton {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+.termsText {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.servicesBar {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #17a2b8, #28a745);
+  color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    flex-basis: 40%;
+    justify-content: center;
+  }
+}
+
+.serviceIcon {
+  font-size: 1.5rem;
+}
+
+.serviceText {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceTitle {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.serviceSubtitle {
+  font-size: 0.75rem;
+  margin: 0;
+}
