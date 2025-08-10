@@ -5,6 +5,7 @@ import FastMoving from "@/components/FastMoving/FastMoving";
 import PostSection from "@/components/PostSection/PostSection";
 import DreamCar from "@/components/DreamCar/DreamCar";
 import Services from "@/components/Services/Services";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PostSection backgroundImage="/images/ev-charging.png" />
       <DreamCar />
       <Services />
+      <Footer />
 
     </>
   );

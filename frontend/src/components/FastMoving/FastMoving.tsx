@@ -3,16 +3,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./FastMoving.module.scss";
 import { FaShoppingCart, FaChevronRight, FaStar } from "react-icons/fa";
-
-interface ProductImage {
-  url: string;
-}
+import { HiOutlineShoppingCart } from "react-icons/hi";
 
 interface Product {
   id: number;
   name: string;
   discountPercentage: number;
-  images: ProductImage[];
+  images: String[];
   rating: number;
   reviewsCount: number;
   originalPrice: number;
@@ -105,7 +102,7 @@ const FastMoving: React.FC = () => {
     id: -1 - i,
     name: "",
     discountPercentage: 0,
-    images: [{ url: "" }],
+    images: [],
     rating: 0,
     reviewsCount: 0,
     originalPrice: 0,
@@ -157,7 +154,8 @@ const FastMoving: React.FC = () => {
 
                   <div className={styles.imageSlider}>
                     <div className={styles.imageWrapper}>
-                      <img src={product.images[0]?.url || ""} alt={product.name} />
+                      {/* <img src={product.images[0]?.url || ""} alt={product.name} /> */}
+                      <img src={product.images[0]?.toString() || ""} alt={product.name} />
                     </div>
                     <div className={styles.sliderDots}>
                       {product.images.map((_, index) => (
@@ -187,12 +185,15 @@ const FastMoving: React.FC = () => {
                   </div>
 
                   <div className={styles.priceRow}>
-                    <span className={styles.originalPrice}>
-                      LKR {product.originalPrice}
-                    </span>
-                    <span className={styles.finalPrice}>LKR {product.finalPrice}</span>
-                    <FaShoppingCart className={styles.cartIcon} />
+                    <div className={styles.priceColumn}>
+                      <span className={styles.originalPrice}>LKR {product.originalPrice}</span>
+                      <span className={styles.finalPrice}>LKR {product.finalPrice}</span>
+                    </div>
+                    <div className={styles.cartIconWrapper}>
+                    <HiOutlineShoppingCart className={styles.cartIcon} />
+                    </div>
                   </div>
+
                 </>
               )}
             </div>
