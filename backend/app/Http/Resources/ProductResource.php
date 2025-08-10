@@ -35,7 +35,11 @@ class ProductResource extends JsonResource
                 }
 
                 // 4) Otherwise assume it's a storage path like "products/abc.jpg"
-                return url(Storage::url($img)); // Storage::url -> /storage/..., url() -> absolute
+                // return url(Storage::url($img)); // Storage::url -> /storage/..., url() -> absolute
+                if (!Str::startsWith($img, '/storage')) {
+                    return url(Storage::url($img));
+                }
+                return url($img);
             })->filter()->values()->toArray(),
             'rating' => $this->rating,
             'reviewsCount' => $this->reviews_count,

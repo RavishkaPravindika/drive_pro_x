@@ -4,6 +4,41 @@
 <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow">
     <h1 class="text-2xl font-bold mb-6 text-gray-800">Create Product</h1>
 
+    @if ($errors->any())
+        <div id="error-popup" 
+            class="fixed top-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50 w-80 animate-slide-in">
+            <div class="flex justify-between items-start">
+                <strong class="text-lg">Validation Error</strong>
+                <button onclick="document.getElementById('error-popup').remove()" 
+                        class="text-white hover:text-gray-200">
+                    ✕
+                </button>
+            </div>
+            <ul class="list-disc list-inside mt-2 text-sm">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+
+        <style>
+            @keyframes slideIn {
+                from { transform: translateX(120%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            .animate-slide-in {
+                animation: slideIn 0.4s ease-out;
+            }
+        </style>
+
+        <script>
+            setTimeout(() => {
+                const popup = document.getElementById('error-popup');
+                if (popup) popup.remove();
+            }, 5000);
+        </script>
+    @endif
+
     <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" class="space-y-5">
         @csrf
 
